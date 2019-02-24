@@ -1,0 +1,17 @@
+set(SHOWTIME_HOUDINI_HEADERS
+	"${CMAKE_CURRENT_LIST_DIR}/ShowtimeHoudini.h"
+)
+
+set(SHOWTIME_HOUDINI_SRC
+	"${CMAKE_CURRENT_LIST_DIR}/ShowtimeHoudini.cpp"
+)
+
+target_sources(${SHOWTIME_HOUDINI_TARGET} 
+	PRIVATE 
+	${SHOWTIME_HOUDINI_HEADERS}
+	${SHOWTIME_HOUDINI_SRC})
+target_link_libraries(${SHOWTIME_HOUDINI_TARGET} 
+	PUBLIC 
+	Houdini
+	ShowtimeClient
+)
